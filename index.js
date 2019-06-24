@@ -1,5 +1,5 @@
 'use strict'
-const Glue = require('glue')
+const Glue = require('@hapi/glue')
 const RestHapi = require('rest-hapi')
 const Manifest = require('./config/manifest.conf')
 
@@ -10,7 +10,10 @@ const composeOptions = {
 const startServer = async function() {
   try {
     const manifest = Manifest.get('/')
-    const server = await Glue.compose(manifest, composeOptions)
+    const server = await Glue.compose(
+      manifest,
+      composeOptions
+    )
 
     await server.start()
 
