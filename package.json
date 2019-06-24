@@ -12,9 +12,7 @@
     "start:prod": "NODE_ENV=production node index.js",
     "test": "jest --coverage",
     "seed": "node scripts/seed.js",
-    "update-permissions": "node scripts/update-permissions.js",
-    "precommit": "lint-staged",
-    "lint": "eslint --fix **/*.js ./"
+    "update-permissions": "node scripts/update-permissions.js"
   },
   "lint-staged": {
     "**/*.js": [
@@ -27,8 +25,8 @@
     "npm": ">=6.9.0"
   },
   "dependencies": {
-    "@hapi/bell": "latest",
     "@hapi/b64": "latest",
+    "@hapi/bell": "latest",
     "@hapi/boom": "latest",
     "@hapi/bounce": "latest",
     "@hapi/call": "latest",
@@ -43,6 +41,7 @@
     "@hapi/topo": "latest",
     "aws-sdk": "^2.240.0",
     "bcryptjs": "^2.4.3",
+    "bell": "^10.0.0",
     "chalk": "*",
     "confidence": "^4.0.2",
     "dotenv": "^8.0.0",

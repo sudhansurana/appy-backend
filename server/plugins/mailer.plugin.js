@@ -4,7 +4,7 @@ const path = require('path')
 const Fs = require('fs')
 const Q = require('q')
 const Handlebars = require('handlebars')
-const Hoek = require('hoek')
+const Hoek = require('@hapi/hoek')
 const Markdown = require('nodemailer-markdown').markdown
 const Nodemailer = require('nodemailer')
 

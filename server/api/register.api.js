@@ -1,7 +1,7 @@
 'use strict'
 
-const Joi = require('joi')
-const Boom = require('boom')
+const Joi = require('@hapi/joi')
+const Boom = require('@hapi/boom')
 const Chalk = require('chalk')
 const Jwt = require('jsonwebtoken')
 const RestHapi = require('rest-hapi')

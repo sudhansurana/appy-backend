@@ -7,7 +7,7 @@ const Mongoose = require('mongoose')
 const RestHapi = require('rest-hapi')
 const faker = require('faker')
 const iplocation = require('iplocation')
-const Glue = require('glue')
+const Glue = require('@hapi/glue')
 const updatePermissions = require('../utilities/update-permissions.utility')
 const dropCollections = require('../utilities/drop-collections.utility')
 const Manifest = require('../config/manifest.conf')
@@ -32,7 +32,10 @@ const PERMISSION_STATES = Config.get('/constants/PERMISSION_STATES')
     }
 
     const manifest = Manifest.get('/')
-    const server = await Glue.compose(manifest, composeOptions)
+    const server = await Glue.compose(
+      manifest,
+      composeOptions
+    )
 
     await server.start()
 
